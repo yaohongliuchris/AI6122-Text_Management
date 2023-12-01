@@ -1,9 +1,6 @@
 # 6122_text_group_project
 
 Code for 3.1 Domain Specific Dataset Analysis is in Dataset Analysis File. 
-Code for 3.2 Development of a Simple Search Engine is in SearchEngine File. 
-Code for 3.3 Development of a Research Trend Explorer is in ResearchTrendExplorer File. 
-Code for 3.4 Application is in SearchEngine File. 
 You may also read the readme.md under those files.
 
 
@@ -30,58 +27,6 @@ Three tiny task codes (Tokenization and stemming AND Sentence segmentation AND P
     b. **Healthcare NLP: LLMs, Transformers, Datasets**: https://www.kaggle.com/datasets/jpmiller/layoutlm/data
     
     c. **ARXIV Paper Abstruct**: https://www.kaggle.com/datasets/neelshah18/arxivdataset
-
-
-
-# SearchEngine
-
-This folder contains three packages, the indexDB, researchTrendExplorer and searchApplication package. 
-
-### indexDB package
-
-ParseDB.java is mainly used to parse xml and build index data. 
-SpecificAnalyzer.java is mainly used to process the content in different xml tags.
-SearchEngine.java is used for user input and show search results.
-
-### researchTrendExplorer package
-
-ResearchTrendExplorer.java is used to get the certain type of conference data, and save the filtered data into result.csv files for further processing.
-
-### searchApplication package
-
-ApplicationSearchEngine.java is a Java GUI application shows different search interface and results.
-
-
-### Search Function
-
-This search engine is capable of accommodating term-based searches, encompassing both single terms and phrases. It supports Strict Term Search, Flexible Term Search, Specific Field Search, and Advanced Field Search. It will return the top 10 similar snippets with search queries highlighted in descending ranking scores. 
-
-**Strict Term Search**: Treat the search query as a unified entity without segmentation and search in all fields. 
-
-**Flexible Term Search**: Segment the search query and match the words with a distance of less than 10 characters in all fields. 
-
-**Specific Field Search**: Segment the search query and match the words with a distance of less than 10 characters in a single field. 
-
-**Advanced Field Search**: Users need to specify all fields. The entered phrase will be segmented and matched to the words with a distance of less than 10 characters in a single field.
-
-
-
-Please download all files in the folder SearchEngine and set the correct xmpath for your dataset in SearchEngine/src/indexDB/SearchEngine.java: 
-    
-
-    xmlPath = '/your/dataset/folder/path/';
-    indexDir = '/your/index/files/saving/path/';
-
-The dataset we use is "https://dblp.org/faq/How+can+I+download+the+whole+dblp+dataset.html". You can download other datasets to build your custom implementation. 
-
-
-You can find Lucene at https://lucene.apache.org/
-You can find Apache Commons CLI at https://commons.apache.org/proper/commons-cli/
-
-### Application
-
-The application of the search engine with a simple interface is in the folder SearchEngine/src/searchApplication. 
-Users can choose four types of searching by clicking the corresponding button and typing in the search bar. The search results will be shown in the text area in descending order containing the ranking number, the document ID, the score, and the snippets with the search query highlighted in red.
 
 
 Please download all files in the folder SearchEngine and set the correct xmpath for your dataset in SearchEngine/src/searchApplication/ApplicationSearchEngine.java: 
